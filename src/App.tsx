@@ -1,19 +1,24 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { PLATFORM, EDITION, FULL_BRAND } from '@/config/editionConfig';
-import { AppSettings, BgColor, RevealLevel, RitualSection, Office, Degree, Working, PromptFadeMode, RitualPack, AccessLevel } from '@/types';
-import { OFFICE_ICONS, AVAILABLE_VOICES, UNLOCK_CODES } from '@/constants';
-import { SAMPLE_RITUALS } from '@/data/rituals';
-import SettingsOverlay from '@/components/SettingsOverlay';
-import Memorizer from '@/components/Memorizer';
-import RitualCreator from '@/components/RitualCreator';
-import GovernanceDashboard from '@/components/GovernanceDashboard';
-import ErrorBoundary from '@/components/ErrorBoundary';
-import { AccessGate } from '@/components/AccessGate';
-import { canAccessDegree, canAccessOfficerContent, canAccessRitual } from '@/utils/accessUtils';
+
+import { PLATFORM, EDITION, FULL_BRAND } from './config/editionConfig';
+import { AppSettings, BgColor, RevealLevel, RitualSection, Office, Degree, Working, PromptFadeMode, RitualPack, AccessLevel } from './types';
+
+import { OFFICE_ICONS, AVAILABLE_VOICES, UNLOCK_CODES } from './constants';
+import { SAMPLE_RITUALS } from './data/rituals';
+
+import SettingsOverlay from './components/SettingsOverlay';
+import Memorizer from './components/Memorizer';
+import RitualCreator from './components/RitualCreator';
+import GovernanceDashboard from './components/GovernanceDashboard';
+import ErrorBoundary from './components/ErrorBoundary';
+import Logo from './components/Logo';
+import { AccessGate } from './components/AccessGate';
+
+import { canAccessDegree, canAccessOfficerContent, canAccessRitual } from './utils/accessUtils';
+import { normalizeOfficer, normalizeWorking, buildWorkingsIndex } from './utils/officerUtils';
+
 import { Lock, Upload, User, ShieldCheck, Key } from 'lucide-react';
-import Logo from '@/components/Logo';
-import { normalizeOfficer, normalizeWorking, buildWorkingsIndex } from '@/utils/officerUtils';
 
 const DEFAULT_SETTINGS: AppSettings = {
   bgColor: BgColor.WHITE,
