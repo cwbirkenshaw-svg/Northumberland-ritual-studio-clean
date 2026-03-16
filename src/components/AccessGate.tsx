@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Shield, Lock, Key, ChevronRight } from 'lucide-react';
-import { APP_ACCESS_CODE } from '@/constants';
+import { APP_ACCESS_CODE } from '../constants';
 
 interface AccessGateProps {
   onGrantAccess: () => void;
