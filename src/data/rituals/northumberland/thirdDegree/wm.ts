@@ -9,7 +9,7 @@
  * Any derived or learning version must be stored separately under:
  * src/learning/
  */
-import { Degree, Office, RitualSection, Working } from '@/types';
+import { Degree, Office, RitualSection, Working } from '../../../../types';
 
 export const WM_RITUALS: RitualSection[] = [
   {
