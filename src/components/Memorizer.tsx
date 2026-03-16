@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PLATFORM, EDITION, FULL_BRAND } from '../config/editionConfig';
 import { AppSettings, RevealLevel, RitualSection, PromptFadeMode, Office, Working } from '../types';
-import { GoogleGenAI } from "..google/genai";
+import { GoogleGenAI } from "@google/genai";
 import { AudioController, AudioStatus } from '../services/audioController';
 
 interface MemorizerProps {
