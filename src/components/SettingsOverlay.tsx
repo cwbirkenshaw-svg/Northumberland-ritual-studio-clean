@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
-import { AppSettings, BgColor, RitualSection, PromptFadeMode } from '@/types';
-import { AVAILABLE_VOICES } from '@/constants';
+import { AppSettings, BgColor, RitualSection, PromptFadeMode } from '../types';
+import { AVAILABLE_VOICES } from '../constants';
 import { Lock, ChevronRight } from 'lucide-react';
 
 interface SettingsOverlayProps {
