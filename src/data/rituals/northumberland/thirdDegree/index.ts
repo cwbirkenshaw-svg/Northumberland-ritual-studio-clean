@@ -9,7 +9,7 @@
  * Any derived or learning version must be stored separately under:
  * src/learning/
  */
-import { RitualSection } from '@/types';
+import { RitualSection } from '../../../../types';
 import { WM_RITUALS } from './wm';
 import { SW_RITUALS } from './sw';
 import { JW_RITUALS } from './jw';
