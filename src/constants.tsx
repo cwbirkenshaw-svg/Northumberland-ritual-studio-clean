@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Office, Degree, Working, VoiceOption } from '@/types';
+import { Office, Degree, Working, VoiceOption } from './types';
 
 export const AVAILABLE_VOICES: VoiceOption[] = [
   { id: 'Fenrir', label: 'The Commanding Officer', description: 'Deep, Powerful, Resonant' },
