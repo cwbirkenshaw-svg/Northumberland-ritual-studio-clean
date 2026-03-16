@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PLATFORM, EDITION } from '@/config/editionConfig';
+import { PLATFORM, EDITION } from '../config/editionConfig';
 
 interface LogoProps {
   className?: string;
