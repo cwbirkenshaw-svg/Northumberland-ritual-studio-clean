@@ -9,6 +9,6 @@
  * Any derived or learning version must be stored separately under:
  * src/learning/
  */
-import { RitualSection } from '@/types';
+import { RitualSection } from '../../../../types';
 
 export const IG_RITUALS: RitualSection[] = [];
