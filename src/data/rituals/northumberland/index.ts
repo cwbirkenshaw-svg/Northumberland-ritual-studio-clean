@@ -9,7 +9,7 @@
  * Any derived or learning version must be stored separately under:
  * src/learning/
  */
-import { RitualSection } from '@/types';
+import { RitualSection } from '../../../../types';
 import { FIRST_DEGREE_RITUALS } from './firstDegree';
 import { SECOND_DEGREE_RITUALS } from './secondDegree';
 import { THIRD_DEGREE_RITUALS } from './thirdDegree';
