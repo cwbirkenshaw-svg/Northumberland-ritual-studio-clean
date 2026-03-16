@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Degree, Office, RitualSection, Working } from '@/types';
-import { PLATFORM } from '@/config/editionConfig';
+import { Degree, Office, RitualSection, Working } from '../types';
+import { PLATFORM } from '../config/editionConfig';
 
 interface RitualCreatorProps {
   working: Working;
