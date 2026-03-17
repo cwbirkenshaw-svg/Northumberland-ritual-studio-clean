@@ -25,8 +25,7 @@ const Memorizer = ({ section, settings, setSettings, selectedOffice }: Memorizer
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAutoPlaying, setIsAutoPlaying] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
-  const [audioStatus, setAudioStatus] = useState<AudioStatus>({ mode: 'GEMINI', message: 'Voice: Gemini' });
-  
+  const [audioStatus, setAudioStatus] = useState({ mode: 'GEMINI', message: 'Voice: Gemini' });
   // Recording State
   const [isRecording, setIsRecording] = useState(false);
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
@@ -34,7 +33,7 @@ const Memorizer = ({ section, settings, setSettings, selectedOffice }: Memorizer
   const [isEvaluating, setIsEvaluating] = useState(false);
   const [evaluation, setEvaluation] = useState<{ rank: string; feedback: string } | null>(null);
 
-  const audioCtxRef = useRef<AudioContext | null>(null);
+  const audioControllerRef = useRef<any>(null);
   const audioControllerRef = useRef<AudioController | null>(null);
   const userSourceRef = useRef<AudioBufferSourceNode | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -104,7 +103,7 @@ const Memorizer = ({ section, settings, setSettings, selectedOffice }: Memorizer
   }, [isAutoPlaying, isPlaying, isGenerating, currentLineIndex, mode]);
 
   useEffect(() => {
-    audioControllerRef.current = new AudioController((status) => setAudioStatus(status));
+    audioControllerRef.current = audioController;
     return () => audioControllerRef.current?.stop();
   }, []);
 
