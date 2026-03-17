@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { RitualPack } from '../src/types';
+import { RitualPack } from '../types';
 import { validatePack } from '../services/governanceService';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, CheckCircle, AlertCircle, FileText, Lock, User, Info, ArrowLeft, X } from 'lucide-react';
