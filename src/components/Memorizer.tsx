@@ -12,7 +12,7 @@ interface MemorizerProps {
   selectedOffice?: Office | string;
 }
 
-const Memorizer: React.FC<MemorizerProps> = ({ section, settings, setSettings, selectedOffice }) => {
+const Memorizer = ({ section, settings, setSettings, selectedOffice }: MemorizerProps) => {
   const [mode, setMode] = useState<'LEARN' | 'TEST'>('LEARN');
   const [showStageDirections, setShowStageDirections] = useState(true);
   const [filterByOfficer, setFilterByOfficer] = useState(selectedOffice !== 'ALL' && !!selectedOffice);
