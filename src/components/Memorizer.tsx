@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { PLATFORM, EDITION, FULL_BRAND } from '../config/editionConfig';
 import { AppSettings, RevealLevel, RitualSection, PromptFadeMode, Office, Working } from '../types';
 import { GoogleGenAI } from "@google/genai";
-import { AudioController, AudioStatus } from '../services/audioController';
+import audioController from '../services/audioController';
 
 interface MemorizerProps {
   section: RitualSection | { title: string; office: Office; content: string[]; id: string; steps?: any[] };
