@@ -34,7 +34,7 @@ const Memorizer = ({ section, settings, setSettings, selectedOffice }: Memorizer
   const [evaluation, setEvaluation] = useState<{ rank: string; feedback: string } | null>(null);
 
   const audioControllerRef = useRef<any>(null);
-  
+  const audioCtxRef = useRef<AudioContext | null>(null);
   const userSourceRef = useRef<AudioBufferSourceNode | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -209,7 +209,7 @@ const Memorizer = ({ section, settings, setSettings, selectedOffice }: Memorizer
     setIsEvaluating(true);
     
     try {
-      const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
       const ai = new GoogleGenAI({ apiKey });
       const reader = new FileReader();
       
