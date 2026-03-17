@@ -34,7 +34,7 @@ const Memorizer = ({ section, settings, setSettings, selectedOffice }: Memorizer
   const [evaluation, setEvaluation] = useState<{ rank: string; feedback: string } | null>(null);
 
   const audioControllerRef = useRef<any>(null);
-  const audioControllerRef = useRef<AudioController | null>(null);
+  
   const userSourceRef = useRef<AudioBufferSourceNode | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
